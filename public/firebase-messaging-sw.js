@@ -20,24 +20,12 @@ firebase.initializeApp({
 // messages.
 const messaging = firebase.messaging();
 
-messaging.setBackgroundMessageHandler(function(payload) {
-    console.log("Message received.", payload);
-    const title = "Hello world is awesome";
-    const options = {
-        body: "Your notificaiton message .",
-        icon: "/firebase-logo.png"
-    };
-    return self.registration.showNotification(title, options);
-});
-
-// self.addEventListener('notificationclick', function(event) {
-//     console.log('event', event)
-//     console.log('action', event.action)
-//     console.log('data', event.notification.data.FCM_MSG.notification.data)
-    
-//     if(event.action == "subscribe"){
-//         console.log('pgm')
-//     }
-
-//     event.notification.close();
-//  }); 
+// messaging.setBackgroundMessageHandler(function(payload) {
+//     console.log("Message received.", payload);
+//     const title = "Hello world is awesome";
+//     const options = {
+//         body: "Your notificaiton message .",
+//         icon: "/firebase-logo.png"
+//     };
+//     return self.registration.showNotification(title, options);
+// });
