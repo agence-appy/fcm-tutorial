@@ -20,7 +20,7 @@ Please follow this [tutorial](https://github.com/silviolleite/laravel-pwa).
 
 ## Migration
 
-We'll create a migration to store the user device token.
+Create and save a user with the device token.
 
 ```php
 //database/migrations/2014_10_12_000000_create_users_table.php
