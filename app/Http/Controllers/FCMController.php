@@ -3,10 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use Appy\FcmHttpV1\FcmNotification;
-use Appy\FcmHttpV1\FcmTopicHelper;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
 
 class FCMController extends Controller
 {

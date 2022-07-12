@@ -33,18 +33,6 @@
                 messaging.getToken()
             )
             .then(function(res) {
-                // fetch('{{ route('register-token') }}', {
-                //         method: 'post',
-                //         headers: {
-                //             'Content-Type': 'application/json',
-                //             "X-CSRF-TOKEN": csrfToken
-                //         }
-                //         body: JSON.stringify({
-                //             _token: csrfToken,
-                //             token: res
-                //         })
-                //     },
-                // })
                 fetch("{{ route('register-token') }}", {
                         method: 'POST',
                         headers: {
