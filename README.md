@@ -1,6 +1,16 @@
 # FCM V1 LARAVEL TUTORIAL
 
-This tutorial will teach you step by step how to implement FCM V1 in your Laravel project.
+Hello world 😎,
+
+If you work in web development, one day you will need to send push notifications. Push Notifications are usefull in so many cases. With them, you can target the right customers or users, increase user retention, boost conversion rates and increase app engagement.
+
+I essentially work with Laravel. In most of projects, clients needs to send push notifications to users. To stay up to date, I use the new [FCM Http V1 API](https://firebase.google.com/docs/cloud-messaging/migrate-v1). The first time I want to implement it in Laravel, it wasn't really fun. I had to search in so many websites to achieve what I needed. I haven't found any Laravel package with easy install and usage, so I decided to create one.
+
+In this package, you will need to configure one time your Firebase project and your Laravel application.
+
+**After that, you w'll be able to send notifications in only 2 lines.**
+
+This tutorial will teach you step by step how to implement FCM V1 in your Laravel project. We w'll see how to configure Firebase project and Laravel App. You will see how to generate FCM device tokens, how to subscribe/unsubscribe tokens to topic and finally how two send push notification in the easiest way. Ready ?
 
 # Requirements
 
