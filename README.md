@@ -20,6 +20,8 @@ Please follow this [tutorial](https://github.com/silviolleite/laravel-pwa).
 
 ## Migration
 
+We'll create a migration to store the user device token.
+
 ```php
 //database/migrations/2014_10_12_000000_create_users_table.php
 
@@ -48,6 +50,9 @@ return new class extends Migration
 ```
 
 ## Model
+
+Add device_token to fillable properties.
+
 ```php
 //app/Models/User.php
 
@@ -67,6 +72,8 @@ class User extends Authenticatable
 
 ## Routes
 
+Create route to store the device token.
+
 ```php
 //routes/web.php
 
@@ -83,6 +90,8 @@ Route::post('/register-token', [ FCMController::class, 'registerToken'])->name('
 ```
 
 ## Controller
+
+Create and save an user with the device token.
 
 ```php
 //app/Http/Controllers/FCMController.php
@@ -107,6 +116,7 @@ class FCMController extends Controller
 
 ## View
 
+In this view, we'll generate a FCM device token. Then we'll send it to our controller.
 ```blade
 {{-- /resources/views/welcome.blade.php --}}
 
@@ -173,8 +183,6 @@ To send notification, we'll use Laravel Command.(We use Laravel Command just for
 ```
 php artisan make:command FCM
 ```
-File created under app/Console/Commands/<your command>
-
 ```php
 <?php
 
