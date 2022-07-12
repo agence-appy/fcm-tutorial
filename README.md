@@ -22,10 +22,6 @@ To configure Firebase Cloud Messaging V1, please refer to the [Firebase Install]
 
 To configure Laravel project, please refer to the [Laravel Install](https://github.com/agence-appy/fcmhttpv1) section.
 
-## PWA Configuration
-
-Please follow this [tutorial](https://github.com/silviolleite/laravel-pwa).
-
 # FCM V1 Implementation
 
 ## Migration
