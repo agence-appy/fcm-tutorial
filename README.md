@@ -1,6 +1,16 @@
 # FCM V1 LARAVEL TUTORIAL
 
-This tutorial will teach you step by step how to implement FCM V1 in your Laravel project.
+Hello world 😎,
+
+If you work in web development, one day you will need to send push notifications. Push Notifications are usefull in so many cases. With them, you can target the right customers or users, increase user retention, boost conversion rates and increase app engagement.
+
+I essentially work with Laravel. In most of projects, clients need to send push notifications to users. To stay up to date, I wanted to use the new [FCM Http V1 API](https://firebase.google.com/docs/cloud-messaging/migrate-v1). The first time I tried to implement it in Laravel, it wasn't really fun. I had to search in so many websites to achieve what I needed. I haven't found any Laravel package with easy install and usage, so I decided to create one.
+
+In this package, you just need to setup your Firebase project and your Laravel application in one go.
+
+**After that, you w'll be able to send notifications in only 2 lines.**
+
+This tutorial will teach you step by step how to implement FCM V1 in your Laravel project. We w'll see how to configure Firebase project and Laravel App. You will see how to generate FCM device tokens, how to subscribe/unsubscribe tokens to topic and finally how two send push notification in the easiest way. Ready ?
 
 # Requirements
 
@@ -19,6 +29,8 @@ Please follow this [tutorial](https://github.com/silviolleite/laravel-pwa).
 # FCM V1 Implementation
 
 ## Migration
+
+Create and save a user with the device token.
 
 ```php
 //database/migrations/2014_10_12_000000_create_users_table.php
@@ -48,6 +60,9 @@ return new class extends Migration
 ```
 
 ## Model
+
+Add device_token to fillable properties.
+
 ```php
 //app/Models/User.php
 
@@ -67,6 +82,8 @@ class User extends Authenticatable
 
 ## Routes
 
+Create route to store the device token.
+
 ```php
 //routes/web.php
 
@@ -83,6 +100,8 @@ Route::post('/register-token', [ FCMController::class, 'registerToken'])->name('
 ```
 
 ## Controller
+
+Create and save an user with the device token.
 
 ```php
 //app/Http/Controllers/FCMController.php
@@ -107,6 +126,7 @@ class FCMController extends Controller
 
 ## View
 
+In this view, we'll generate a FCM device token. Then we'll send it to our controller.
 ```blade
 {{-- /resources/views/welcome.blade.php --}}
 
@@ -173,8 +193,6 @@ To send notification, we'll use Laravel Command.(We use Laravel Command just for
 ```
 php artisan make:command FCM
 ```
-File created under app/Console/Commands/<your command>
-
 ```php
 <?php
 
